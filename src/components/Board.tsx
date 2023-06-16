@@ -7,12 +7,16 @@ type BroadProps = {
 
 export default function Board({ data }: BroadProps) {
   return (
-    <div className="bg-mainBoard w-[400px] h-[400px] rounded-xl p-2 grid grid-cols-4 grid-rows-4 justify-center items-center">
-      {/* {data.map((row, oneIndex) => {
+    <div className="bg-mainBoard w-[400px] h-[400px] rounded-xl p-2 ">
+      {data.map((row, oneIndex) => {
         return (
-          
-        )
-      })} */}
+          <div key={oneIndex} className="flex justify-center">
+            {row.map((digit, index) => (
+              <Tile num={digit} key={index} />
+            ))}
+          </div>
+        );
+      })}
     </div>
   );
 }
