@@ -9,7 +9,7 @@ export default function Tile({ num }: TileProps) {
     <div
       className={`w-[80px] h-[80px] flex justify-center items-center text-white text-5xl m-2 bg-gray-300`}
     >
-      {/* {num !== 0 ? num : ""} */}
+      {num !== 0 ? num : ""}
     </div>
   );
 }
